@@ -1,2 +1,2 @@
 # control-scripts
-A small repo of important scripts I've written, primarily to operate on Raspbian (Debian).
+A small repo of important scripts I've written and found, primarily to operate on Raspbian (Debian).
