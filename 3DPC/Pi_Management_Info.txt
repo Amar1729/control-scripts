@@ -1,15 +1,15 @@
 # ---- Raspberry Pi B (2012 model)
 
-# -- Last edited Oct 18, 2015 by Amar Paul
+# -- Last edited Nov 7, 2015 by Amar Paul
 
 # -- See below for important shell commands, installed packages
 
-////////////////////////////////////////////////////////////////////
+///////////////////////////////////////
 // This Pi normally controls printer:	-- Printer here --
-////////////////////////////////////////////////////////////////////
+///////////////////////////////////////
 
 
-////////////////////////////////////////////////////////////////////
+///////////////////////////////////////
 // Network Info:
 #See /etc/network/interfaces
 #Also see commands:	netstat -nr
@@ -27,8 +27,12 @@
 // Package management info:
 //	(info about netatalk, avahi-daemon, printrun, octopi ... others?
 
-# Printrun installed+last updated c. 2013
-10/25/15	Printrun updated by Amar Paul
+# Printrun updated ~  10/25/15
+Run with:	$ python Printrun/pronsole.py
+
+# Octopi installed - 11/07/15
+Run with:	$ ~/Octoprint/venv/bin/octoprint
+# Running on http://0.0.0.0:5000/
 
 ////////////////////////////////////////////////////////////////////
 // Important shell commands
