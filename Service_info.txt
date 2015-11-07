@@ -1,0 +1,26 @@
+Starting Apache (port 80)
+stop it:		sudo /etc/init.d/apache2 stop
+start it with:		sudo /etc/init.d/apache2 start
+reload the config with:	sudo /etc/init.d/apache2 reload
+restart (stop followed by start):	sudo /etc/init.d/apache2 restart
+
+Starting Deluged, Deluge-web (web should be on port 8112: problems)
+Start deluged:		deluged
+Start webui:		deluge-web &
+
+Starting noip2
+Start manually:		/usr/local/bin/noip2
+// Should write startup script to start on boot
+
+// Anything else??
+Service		Port
+Kodi/Chorus	8080
+Webmin		10000		#takes lots of power
+	url: https://raspberrypi.local:10000
+minidlna	80	(default, should change?)
+
+netatalk	// doesnt really need a port to conndectivity
+    sudo /etc/init.d/netatalk stop
+    sudo nano /etc/netatalk/AppleVolumes.default 
+
+nfs server
