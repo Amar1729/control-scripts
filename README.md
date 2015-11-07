@@ -11,3 +11,6 @@ reboot_wifi.sh:
 service_start.sh:
 	In-progress script to start several important programs on boot.
 
+3DPC dir:
+Print.py:
+	Headless+client-less control of printer (uses nohup)
