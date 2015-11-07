@@ -10,3 +10,5 @@ reboot_wifi.sh:
 
 service_start.sh:
 	In-progress script to start several important programs on boot.
+=======
+A small repo of important scripts I've written and found, primarily to operate on Raspbian (Debian).
