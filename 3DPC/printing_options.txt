@@ -1,0 +1,6 @@
+-->Ubuntu Installation (req'd pkgs):
+    $ sudo apt-get install python python-serial python-wxgtk2.8 \
+	python-tk git-core python-pyglet python-psutil python-numpy
+    $ git clone https://github.com/kliment/Printrun.git 
+    $ cd Printrun
+    $ ./pronterface.py

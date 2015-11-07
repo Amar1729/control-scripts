@@ -1,0 +1,40 @@
+# ---- Raspberry Pi B (2012 model)
+
+# -- Last edited Oct 18, 2015 by Amar Paul
+
+# -- See below for important shell commands, installed packages
+
+////////////////////////////////////////////////////////////////////
+// This Pi normally controls printer:	-- Printer here --
+////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////
+// Network Info:
+#See /etc/network/interfaces
+#Also see commands:	netstat -nr
+#			ifconfig
+# Note: current router assigns IPs on range 100-199
+
+3D Printing Club = {
+	IP: 172.16.0.50
+	eth0: static
+	wlan0: needs WiFi adapter, dynamic (should fix)
+}
+////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////
+// Package management info:
+//	(info about netatalk, avahi-daemon, printrun, octopi ... others?
+
+# Printrun installed+last updated c. 2013
+10/25/15	Printrun updated by Amar Paul
+
+////////////////////////////////////////////////////////////////////
+// Important shell commands
+$ sudo apt-get update		# Updates repo info (doesn't download anything new)
+$ sudo apt-get upgrade		# Upgrades packages
+$ sudo apt-get dist-upgrade	# Upgrades packages that have new dependencies (infrequent)
+$ cd Printrun/ && git pull	# Upgrades Printrun
+////////////////////////////////////////////////////////////////////
+
