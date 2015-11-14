@@ -11,6 +11,9 @@
 #  netatalk	sudo /etc/init.d/netatalk start
 #  avahi-daemon	sudo /etc/init.d/avah-daemon start
 
+# apache stuff is kept in 	/var/www/html
+#				and http.conf where?
+
 message=" "
 FILEPATH=/home/pi/.services.log
 

@@ -14,3 +14,8 @@ service_start.sh:
 3DPC dir:
 Print.py:
 	Headless+client-less control of printer (uses nohup)
+
+test
+deluge-console "add -p /media/SEAGATE/MOVIES/FullMovies/ $URLPATH"
+deluge-console "add -p /media/SEAGATE/MOVIES/Torrents/downloading/ $URLPATH"
+deluge-console "add -p $FILEPATH $URLPATH"
