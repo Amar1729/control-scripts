@@ -21,9 +21,15 @@ then
 	ifdown --force wlan0
 	ifup wlan0
 
+	# portability?
+	ifdown --force etho0
+	ifup eth0
+
 #	sudo /etc/init.d/sshd restart
 	sudo service ssh restart
 	sudo service minidlna restart
+#	sudo pkill deluged
+	deluged
 
 #	bash ~/Scripts/bash/reboot_wifi.sh
 
