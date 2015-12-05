@@ -9,7 +9,7 @@
 #		sudo service minidlna -R
 #		sudo service minidlna force-reload
 #  netatalk	sudo /etc/init.d/netatalk start
-#  avahi-daemon	sudo /etc/init.d/avah-daemon start
+#  avahi-daemon	sudo /etc/init.d/avahi-daemon start
 
 # apache stuff is kept in 	/var/www/html
 #				and http.conf where?
