@@ -21,4 +21,4 @@ shift
 done
 
 sudo mount -o gid=pi,uid=pi $DEVS /media/USB_64
-sudo cp -r $FILES /media/USB_64/Movies
+sudo cp -r "$FILES" /media/USB_64/Movies
