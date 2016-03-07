@@ -1,4 +1,4 @@
 #!/bin/sh
 
-rsync -aHv --delete-during --exclude-from=rsync-exclude / /media/Sg_2TB/pi_backup/ > rsync.log &
+nohup rsync -rHv --delete-during --exclude-from=rsync-exclude / /media/Sg_2TB/pi_backup/ > rsync.log &
 
