@@ -1,4 +1,7 @@
 #!/bin/sh
 
-nohup rsync -rHv --delete-during --exclude-from=rsync-exclude / /media/Sg_2TB/pi_backup/ > rsync.log &
+# This script does currently work:
+# The output goes to odd places? Just run from CL rught now.
+
+nohup rsync -rHv --delete-during --exclude-from=excludes / /media/SEAGATE/pi_backup/ > rsync.log &
 
