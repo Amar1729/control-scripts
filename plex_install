@@ -1,0 +1,18 @@
+locale -a 
+sudo vi /etc/locale.gen 	# Uncomment en_US.UTF-8 UTF-8
+sudo locale-gen
+sudo dpkg-reconfigure locales
+	# Select locales with spacebar (OK with Enter)
+
+# Upgrade libc6 from 2.13 -> 2.19
+ldd --version		# if 2.13, manual repo change/upgrade req'd
+
+echo "deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
+echo "deb http://archive.raspbian.org/raspbian jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
+
+sudo vi /etc/apt/preferences.d/jessie.pref
+#Paste:
+# Package: *
+# Pin: release n=jessie
+# Pin-Priority: -1
+
