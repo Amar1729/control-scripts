@@ -1,0 +1,52 @@
+# Guide:
+# http://www.htpcguides.com/install-plex-media-server-on-raspberry-pi-2/
+# 	And also, for transcoding:
+# http://www.htpcguides.com/fix-plex-server-is-not-powerful-enough-on-raspberry-pi-2/
+# 	Mounting HDs:
+# http://www.htpcguides.com/properly-mount-usb-storage-raspberry-pi/
+
+
+# To install the correct version of libc (why are locales needed?):
+locale -a 
+sudo vi /etc/locale.gen 	# Uncomment en_US.UTF-8 UTF-8
+sudo locale-gen
+sudo dpkg-reconfigure locales
+	# Select locales with spacebar (OK with Enter)
+
+# Upgrade libc6 from 2.13 -> 2.19
+ldd --version		# if 2.13, manual repo change/upgrade req'd
+
+echo "deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
+echo "deb http://archive.raspbian.org/raspbian jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
+
+sudo vi /etc/apt/preferences.d/jessie.pref
+#Paste:
+# Package: *
+# Pin: release n=jessie
+# Pin-Priority: -1
+
+sudo apt-get update
+sudo apt-get install -t jessie libc6 -y	# -y is automatic "yes"
+
+
+# Change wheezy pin priority to 989 if this is still 2.13
+ldd --version
+
+# Now for the Installation!
+sudo apt-get update
+sudo apt-get install apt-transport-https -y --force-yes
+wget -0 - https://dev2day.de/pms/dev2day-pms.gpg.key | sudo apt-key add -
+echo "deb https://dev2day.de/pms/ jessie main" | sudo tee /etc/apt/sources.list.d/pms.list
+sudo apt-get update
+sudo apt-get install plexmediaserver -y
+sudo apt-get install -t jessie plexmediaserver -y	# from manual install
+
+# Access at:
+http://ip.address:32400/web 
+http://ip.address:32400/manage/index.html#!/setup
+
+# Manual (force) start:
+sudo bash /usr/lib/plexmediaserver/start.sh &
+
+# Uninstall:
+sudo apt-get remove plexmediaserver -y
