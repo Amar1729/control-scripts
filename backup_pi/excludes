@@ -8,3 +8,4 @@
 /media/*
 
 /home/pi/.kodi/userdata/Thumbnails/*
+*.git/*
